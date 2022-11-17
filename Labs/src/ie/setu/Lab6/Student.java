@@ -18,8 +18,11 @@ public class Student extends Person {
 
 	//to string method
 	public String toString() {
-		return "Student [numCourses=" + numCourses + ", cources=" + Arrays.toString(courses) + ", grades="
-				+ Arrays.toString(grades) + "]";
+		String ans = "Student [name: " + name + " address:" + address;
+		for(int i = 0; i < nextIndex; i++) {
+			ans += " " + courses[i] + ": " + grades[i];
+		}
+		return ans + "]";
 	}
 	
 	//methods
@@ -30,6 +33,7 @@ public class Student extends Person {
 	}
 	
 	public void printGrades() {
+		System.out.println(toString());
 		for(int i = 0; i < nextIndex; i++) {
 			System.out.println(courses[i] + ": " + grades[i]);
 		}
