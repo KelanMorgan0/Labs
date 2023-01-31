@@ -32,7 +32,7 @@ public class Gui extends JFrame{
 	private JButton ok;
 	private JButton cancel;
 	private JButton setup;
-	private JButton Help;
+	private JButton help;
 	
 	private JTextField text1;
 	private JTextField text2;
@@ -73,51 +73,132 @@ public class Gui extends JFrame{
 		root.add(p4, grid);
 		
 		//p1
+		printer = new JLabel("Printer: MyPrinter");
 		grid.gridx = 0;
 		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p.add(printer, grid);
 		
 		grid.gridx = 0;
 		grid.gridy = 1;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p.add(p2, grid);
 		
 		grid.gridx = 0;
 		grid.gridy = 2;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p.add(p3, grid);
 		
 		//TODO p2
+		text1 = new JTextField();
 		grid.gridx = 0;
 		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p2.add(text1, grid);
 		
 		grid.gridx = 1;
 		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p2.add(p5, grid);
 		
+		text2 = new JTextField();
 		grid.gridx = 2;
 		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p2.add(text2, grid);
 		
 		grid.gridx = 3;
 		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p2.add(p6, grid);
 		
+		text3 = new JTextField();
 		grid.gridx = 4;
 		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p2.add(text3, grid);
 		
 		//TODO p3
+		printerQualityLabel = new JLabel("Print Quality: ");
 		grid.gridx = 0;
 		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p3.add(printerQualityLabel, grid);
 		
+		printQuality = new JComboBox(quality);
 		grid.gridx = 1;
 		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p3.add(printQuality, grid);
 		
+		printToFile = new JCheckBox(" Print to File");
 		grid.gridx = 2;
 		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
 		p3.add(printToFile, grid);
+		
+		//TODO p4
+		ok = new JButton("Ok");
+		grid.gridx = 0;
+		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
+		p4.add(ok, grid);
+		
+		cancel = new JButton("Cancel");
+		grid.gridx = 0;
+		grid.gridy = 1;
+		grid.fill = GridBagConstraints.HORIZONTAL;
+		p4.add(cancel, grid);
+		
+		setup = new JButton("Setup...");
+		grid.gridx = 0;
+		grid.gridy = 2;
+		grid.fill = GridBagConstraints.HORIZONTAL;
+		p4.add(setup, grid);
+		
+		help = new JButton("Help");
+		grid.gridx = 0;
+		grid.gridy = 3;
+		grid.fill = GridBagConstraints.HORIZONTAL;
+		p4.add(help, grid);
+		
+		//TODO p5
+		image = new JCheckBox("Image");
+		grid.gridx = 0;
+		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
+		p5.add(image, grid);
+		
+		text = new JCheckBox("Text");
+		grid.gridx = 0;
+		grid.gridy = 1;
+		grid.fill = GridBagConstraints.HORIZONTAL;
+		p5.add(text, grid);
+		
+		code = new JCheckBox("code");
+		grid.gridx = 0;
+		grid.gridy = 2;
+		grid.fill = GridBagConstraints.HORIZONTAL;
+		p5.add(code, grid);
+		
+		//TODO p6
+		selection = new JRadioButton("Selection");
+		grid.gridx = 0;
+		grid.gridy = 0;
+		grid.fill = GridBagConstraints.HORIZONTAL;
+		p6.add(selection, grid);
+		
+		all = new JRadioButton("All");
+		grid.gridx = 0;
+		grid.gridy = 1;
+		grid.fill = GridBagConstraints.HORIZONTAL;
+		p6.add(all, grid);
+		
+		applet = new JRadioButton("Applet");
+		grid.gridx = 0;
+		grid.gridy = 2;
+		grid.fill = GridBagConstraints.HORIZONTAL;
+		p6.add(applet, grid);
 		
 		add(root);
 	}
